@@ -166,7 +166,9 @@ Use `*` in service package.json to always use the latest version of the package.
 
 ### Option 2: Use Manual Versioning with NPM
 
-If you want explicit versioning, update util-logger/package.json before publishing:
+(Its not useful to have different versions of the same package in different services)
+
+If you want `explicit versioning`, update util-logger/package.json before publishing:
 
 ```json
 {
@@ -182,11 +184,15 @@ If you want explicit versioning, update util-logger/package.json before publishi
 ```
 
 ```sh
-# This will increment the patch version, create a git commit and tag
+# This will increment the patch version (better manual change)
 
 npm version patch --workspace=packages/util-logger
 
 # Push the changes and tags to remote repository
+# add files in specific package folder
+git add .
+git commit -m "chore: bump util-logger to 1.0.1"
+git tag util-logger@1.0.1
 git push
 git push --tags
 
