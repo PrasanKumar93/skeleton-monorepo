@@ -26,11 +26,5 @@ export default {
         { name: "packages/util-logger" },
         { name: "services/code-graph" },
     ],
-    allowCustomScopes: true,
-    ai: {
-        provider: "openai",
-        apiKey: process.env.OPENAI_API_KEY,
-        model: "gpt-3.5-turbo",
-    },
-
+    allowCustomScopes: true
 };

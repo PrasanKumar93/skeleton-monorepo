@@ -12,13 +12,16 @@
     "start": "npm run build && npm run start --workspaces",
     "dev": "npm run build && npm run dev --workspaces",
     "postinstall": "npm run build",
-    "commit": "npx cz"
+    "commit-no-ai": "npx cz",
+    "commit": "dotenv -e .env -- npx czg ai"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
     "commitizen": "^4.3.1",
     "cz-git": "^1.11.0",
+    "czg": "^1.11.0",
+    "dotenv-cli": "^8.0.0",
     "husky": "^9.1.7"
   },
   "config": {
