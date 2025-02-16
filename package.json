@@ -6,6 +6,7 @@
     "packages/*",
     "services/*"
   ],
+  "type": "module",
   "scripts": {
     "build": "npm run build --workspaces",
     "start": "npm run build && npm run start --workspaces",
@@ -17,8 +18,7 @@
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
     "commitizen": "^4.3.1",
-    "cz-git": "^1.11.0",
-    "husky": "^9.1.7"
+    "cz-git": "^1.11.0"
   },
   "config": {
     "commitizen": {

@@ -12,7 +12,8 @@ Modify your package.json to include cz-git as the commitizen adapter:
 {
   "config": {
     "commitizen": {
-      "path": "node_modules/cz-git"
+      "path": "node_modules/cz-git",
+      "config": ".cz-config.js"
     }
   }
 }
@@ -22,9 +23,9 @@ Modify your package.json to include cz-git as the commitizen adapter:
 
 ```js
 //.cz-config.js
-module.exports = {
+export default {
   // Use cz-git as the adapter
-  extends: ["@commitlint/config-conventional"],
+  //extends: ["@commitlint/config-conventional"],
 
   // Define types for the commit messages
   prompt: {
@@ -144,7 +145,7 @@ npm install --save-dev @commitlint/{config-conventional,cli}
 
 ```js
 //commitlint.config.js
-module.exports = {
+export default {
   extends: ["@commitlint/config-conventional"],
 };
 ```
