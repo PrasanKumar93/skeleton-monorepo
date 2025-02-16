@@ -1,3 +1,4 @@
+
 // .cz-config.js (Optional, if you want a separate config file)
 export default {
     messages: {
@@ -26,5 +27,10 @@ export default {
         { name: "services/code-graph" },
     ],
     allowCustomScopes: true,
+    ai: {
+        provider: "openai",
+        apiKey: process.env.OPENAI_API_KEY,
+        model: "gpt-3.5-turbo",
+    },
 
 };
