@@ -1,3 +1,5 @@
+# cz-git
+
 ```sh
 npm install --save-dev commitizen cz-git @commitlint/cli @commitlint/config-conventional
 ```
@@ -57,4 +59,5 @@ export default {
 ```sh
 npm cache clean --force
 npx clear-npx-cache
+npm install
 ```

@@ -12,8 +12,7 @@ Modify your package.json to include cz-git as the commitizen adapter:
 {
   "config": {
     "commitizen": {
-      "path": "node_modules/cz-git",
-      "config": ".cz-config.js"
+      "path": "node_modules/cz-git"
     }
   }
 }
@@ -33,7 +32,7 @@ export default {
       type: "Select the type of change that you're committing:",
       scope: "Select the scope of your change (optional):",
       customScope: "Specify a custom scope:",
-      subject: "Write a short, imperative description of the change:\n",
+      subject: "Write a short description of the change:\n",
       body: "Provide a longer description of the change (optional). Use '|' for new lines:\n",
       breaking: "List any breaking changes (optional):\n",
       footer: "Reference issues this commit closes (e.g., #123) (optional):\n",
