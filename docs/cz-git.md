@@ -155,6 +155,7 @@ module.exports = {
 # dev dependency
 npm install --save-dev husky
 mkdir -p .husky
+git config core.hooksPath .husky
 ```
 
 ```sh
@@ -163,6 +164,11 @@ chmod +x .husky/commit-msg
 
 # Since Husky stores hooks inside .husky/, you need to ensure they are executable:
 chmod -R +x .husky/*
+```
+
+```sh
+# Run this command to see if Husky is working:
+HUSKY_DEBUG=1 git commit -m "test"
 ```
 
 ## How Husky Works
