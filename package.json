@@ -10,6 +10,19 @@
     "build": "npm run build --workspaces",
     "start": "npm run build && npm run start --workspaces",
     "dev": "npm run build && npm run dev --workspaces",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build",
+    "commit": "npx cz"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "commitizen": "^4.3.1",
+    "cz-git": "^1.11.0",
+    "husky": "^9.1.7"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
   }
 }
